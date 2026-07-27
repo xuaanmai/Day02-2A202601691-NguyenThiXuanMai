@@ -1,37 +1,39 @@
-﻿# Group Report — Day 02
+# Group Report — Day 02
 
 ## 0. Thành viên nhóm
 
-> Danh sách chỉ giữ họ tên, mã học viên và đầu việc cần thiết cho bài lab; không đưa số điện thoại hoặc thông tin liên hệ cá nhân vào report.
+> Nhóm thực tế có 11 thành viên theo danh sách được cung cấp. Bảng dưới đây mô tả đầu việc trong phạm vi Day 02 Lab, không phải vai trò xây dựng sản phẩm hay triển khai hệ thống.
 
 | STT | Họ và tên | Mã học viên | Vai trò và đầu việc phụ trách |
 |---:|---|---|---|
-| 1 | Nguyễn Thị Xuân Mai | 2A202601691 | **Thư ký nhóm:** ghi biên bản pitch/challenge, tổng hợp candidates và lưu bằng chứng thảo luận |
-| 2 | Lưu Quang Nhật | 2A202601920 | **Group Convergence:** gom cluster, lập shortlist và tổng hợp scorecard Phase 3 |
-| 3 | Đoàn Minh Hiếu | 2A202601733 | **Phỏng vấn người dùng:** chuẩn bị câu hỏi, thực hiện phỏng vấn và tổng hợp tín hiệu xác nhận/phản bác |
-| 4 | Kim Mạnh Hưng | 2A202601679 | **Survey và baseline:** triển khai khảo sát, thu log tác vụ và tính thời gian tra cứu hiện tại |
-| 5 | Trần Doãn Hưng | 2A202601143 | **Audit dữ liệu văn bản:** kiểm tra metadata, phiên bản, hiệu lực và quan hệ sửa đổi/thay thế |
-| 6 | Lê Tuấn Hiệp | 2A202601667 | **Research giải pháp:** tìm công cụ/pattern tương tự, kiểm nguồn và rút ra bài học cho nhóm |
-| 7 | Ngô Khánh Trượng | 2A202601477 | **Current Workflow:** mô tả actor, input/output, handoff, thời gian và bottleneck hiện tại |
-| 8 | Phùng Văn Linh | 2A202601992 | **Nhóm trưởng/Decision owner:** điều phối tiến độ, xử lý bất đồng, dẫn thảo luận và chốt quyết định nhóm |
-| 9 | Cao Hữu Phúc | 2A202601283 | **Future Workflow:** thiết kế điểm can thiệp Rule/AI, human review, fallback và rollback |
-| 10 | Đinh Lê Quỳnh Phương | 2A202601865 | **Problem Statement và Metrics:** hoàn thiện v0/v1, baseline, target và cách đo |
-| 11 | Nguyễn Ngọc Sơn | 2A202601948 | **Risk, Boundary và QA:** kiểm tra phân quyền, citation, giới hạn AI và rà report theo rubric |
+| 1 | Nguyễn Thị Xuân Mai | 2A202601691 | Tổng hợp các candidate problems và ghi lại ý chính khi pitch/challenge |
+| 2 | Lưu Quang Nhật | 2A202601920 | Gom các problem trùng nhau thành cluster và hỗ trợ lập shortlist |
+| 3 | Đoàn Minh Hiếu | 2A202601733 | Soạn câu hỏi quick interview và tổng hợp kết quả khi có dữ liệu |
+| 4 | Kim Mạnh Hưng | 2A202601679 | Đề xuất cách đo baseline thời gian và success metric |
+| 5 | Trần Doãn Hưng | 2A202601143 | Mô tả pain tra cứu văn bản; kiểm tra giả định về phiên bản, hiệu lực và metadata |
+| 6 | Lê Tuấn Hiệp | 2A202601667 | Tìm 2–3 giải pháp/pattern tương tự và ghi rõ điểm mạnh, khoảng trống |
+| 7 | Ngô Khánh Trượng | 2A202601477 | Vẽ current workflow, chỉ ra bước nghẽn và handoff |
+| 8 | Phùng Văn Linh | 2A202601992 | Điều phối thảo luận, tổng hợp scorecard và ghi nhận quyết định chung |
+| 9 | Cao Hữu Phúc | 2A202601283 | Vẽ future workflow, human boundary và fallback |
+| 10 | Đinh Lê Quỳnh Phương | 2A202601865 | Tổng hợp Problem Statement v0/v1 và cách đo metric |
+| 11 | Nguyễn Ngọc Sơn | 2A202601948 | So sánh No AI/Rule/Workflow/Agent, rà boundary và decision theo rubric |
 
 ## 1. Trạng thái bằng chứng
 
 Nhóm đã chốt candidate:
 
-
-
+```text
+PolicyMate — hỗ trợ giáo viên tìm đúng quy định/hướng dẫn của trường,
+đúng phiên bản đang có hiệu lực và có trích dẫn để kiểm tra.
+```
 Tại thời điểm lập báo cáo, dữ liệu có sẵn mới xác nhận:
 
 - danh sách và vai trò của 11 thành viên;
-- log Problem Scan được chuẩn hóa thành 11 candidate problems của 11 thành viên;
+- danh sách 11 candidate problems đã được ghi lại trong report;
 - kết quả cluster, shortlist và scorecard hội tụ được tổng hợp ở Phase 3;
 - candidate PolicyMate đã được nhóm chọn;
-- thực trạng ban đầu: lãnh đạo, nhân viên và giảng viên mất nhiều thời gian tìm đúng văn bản/quy chế đang có hiệu lực trong kho nội bộ phân tán;
-- mục tiêu định hướng: độ chính xác nội dung tối thiểu 85% và giảm ít nhất 50% thời gian tìm thông tin;
+- dấu hiệu ban đầu từ Problem Scan cá nhân: giáo viên có thể mất khoảng 10–20 phút để tìm đúng văn bản hoặc phải hỏi đồng nghiệp;
+- mục tiêu định hướng: giảm thời gian tìm từ khoảng 10–20 phút xuống dưới 5 phút trong pilot, đồng thời trả đúng nguồn để người dùng kiểm tra;
 - các ràng buộc bắt buộc: grounded trên văn bản chính thức, citation rõ, phân quyền, người dùng chịu trách nhiệm quyết định cuối.
 
 Chưa có trong repo:
@@ -40,13 +42,13 @@ Chưa có trong repo:
 - log tra cứu, survey hoặc phỏng vấn người dùng;
 - mẫu kho văn bản và baseline thời gian.
 
-Vì vậy, Phase 3 được hoàn thiện từ log đã cung cấp và danh sách thành viên của nhóm. Các kết quả validation chưa được điền bằng dữ liệu giả; những con số chưa đo được ghi rõ là mục tiêu hoặc giả thuyết.
+Vì vậy, Phase 3 được tổng hợp từ danh sách candidates đang có trong report và cần các thành viên xác nhận lại. Kết quả validation chưa được điền bằng dữ liệu giả; những con số chưa đo được được ghi rõ là tín hiệu ban đầu, mục tiêu hoặc giả thuyết.
 
 ---
 
 # 2. Phase 3 — Group Convergence
 
-## 2.1. Tổng hợp candidates từ log thành viên
+## 2.1. Tổng hợp candidates đã ghi nhận
 
 Nhóm chuẩn hóa nội dung pitch thành các candidate problems theo cùng cấu trúc: người gặp vấn đề, bottleneck và cảm nhận ban đầu. Các candidate gần nhau vẫn được giữ ở bước này; việc gom trùng được thực hiện ở bước cluster.
 
@@ -56,9 +58,9 @@ Nhóm chuẩn hóa nội dung pitch thành các candidate problems theo cùng c�
 | 2 | Lưu Quang Nhật | Người dùng không được cảnh báo khi văn bản sắp hết hiệu lực hoặc đã có văn bản thay thế | Người tra cứu và người sử dụng kết quả nghiệp vụ | Thiếu kiểm soát phiên bản, ngày hiệu lực và quan hệ thay thế giữa văn bản | Tác động nghiệp vụ lớn; cần audit metadata và cơ chế version control |
 | 3 | Đoàn Minh Hiếu | Cùng một quy định được các phòng ban hiểu và giải thích không thống nhất | Chuyên viên tư vấn, phòng ban nhận tư vấn và người ra quyết định | Thiếu một nguồn diễn giải có căn cứ; phải hỏi lại hoặc xác nhận nhiều lần | Impact rộng nhưng metric chất lượng khó hơn; cần case thực tế để kiểm chứng |
 | 4 | Kim Mạnh Hưng | Khó xây dựng roadmap học tập phù hợp cho từng cá nhân | Người học có mục tiêu, năng lực và quỹ thời gian khác nhau | Phải tự nối mục tiêu, trình độ, thời gian và tài liệu thành lộ trình | AI có thể cá nhân hóa, nhưng độ phù hợp khó đánh giá khách quan |
-| 5 | Trần Doãn Hưng | Người học không biết nên bắt đầu học từ đâu | Người mới học một lĩnh vực hoặc kỹ năng | Không biết đánh giá điểm xuất phát và chọn nội dung ưu tiên | Pain gần gũi; cần xác định domain học tập cụ thể |
+| 5 | Ngô Khánh Trượng | Người học không biết nên bắt đầu học từ đâu | Người mới học một lĩnh vực hoặc kỹ năng | Không biết đánh giá điểm xuất phát và chọn nội dung ưu tiên | Pain gần gũi; cần xác định domain học tập cụ thể |
 | 6 | Lê Tuấn Hiệp | Người học không biết mình còn thiếu kỹ năng nào | Sinh viên và người đi làm muốn phát triển năng lực | Khái niệm “kỹ năng còn thiếu” mơ hồ nếu không có chuẩn năng lực đích | Tác động rộng nhưng actor, chuẩn đánh giá và metric chưa đủ chặt |
-| 7 | Ngô Khánh Trượng | Văn bản nội bộ nằm rải rác ở nhiều thư mục và định dạng nên khó xác định đâu là nguồn chính thức | Nhân viên, giảng viên và người quản trị văn bản | Phải tìm qua nhiều nguồn, tên file không thống nhất và có tài liệu trùng lặp | Pain xảy ra trước cả bước AI; cần chuẩn hóa kho và metadata |
+| 7 | Trần Doãn Hưng | Quy định, thông báo và hướng dẫn của trường nằm ở nhiều kênh nên giáo viên khó tìm lại khi cần | Giáo viên | Phải tìm qua email, nhóm chat và website hoặc hỏi đồng nghiệp; có thể mất khoảng 10–20 phút/lần | Actor, dấu hiệu thật và workflow rõ; cần xác minh thêm với giáo viên khác |
 | 8 | Phùng Văn Linh | Kết quả tra cứu không kèm số hiệu, điều/khoản và đoạn nguồn để người dùng kiểm tra | Người sử dụng câu trả lời để xử lý nghiệp vụ hoặc ra quyết định | Phải tìm lại tài liệu gốc; khó biết câu trả lời dựa trên căn cứ nào | Citation là boundary bắt buộc và có metric rõ |
 | 9 | Cao Hữu Phúc | Công cụ tìm kiếm có thể trả về tài liệu mà người dùng không có thẩm quyền xem | Người dùng có các vai trò và phạm vi truy cập khác nhau | Quyền của tài liệu gốc không được giữ nguyên trong lớp tìm kiếm/trợ lý | Rủi ro cao; cần permission filter và kiểm thử truy cập vượt quyền |
 | 10 | Đinh Lê Quỳnh Phương | Văn bản scan hoặc khác định dạng khiến nội dung và metadata được trích xuất không đầy đủ | Người quản trị kho và người tra cứu | OCR sai, mất số hiệu/điều khoản hoặc chia đoạn không đúng làm retrieval sai | Cần audit chất lượng dữ liệu trước khi đặt target AI |
@@ -106,13 +108,13 @@ Nhóm chấm từ 1–5 theo cùng một bộ tiêu chí. Điểm dùng để l�
 
 | Candidate | Actor rõ | Workflow rõ | Pain có evidence | Impact đo được | Làm trong lab | So sánh R/W/A được | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| PolicyMate — đúng điều khoản và hiệu lực | 5 | 5 | 4 | 5 | 4 | 5 | 5 | **33** |
-| Giải thích quy định nhất quán | 5 | 4 | 3 | 4 | 3 | 5 | 4 | **28** |
-| Roadmap học tập theo khoảng cách kỹ năng | 4 | 4 | 3 | 3 | 4 | 4 | 3 | **25** |
+| PolicyMate — đúng điều khoản và hiệu lực | 5 | 5 | 2 | 4 | 4 | 5 | 5 | **30** |
+| Giải thích quy định nhất quán | 5 | 4 | 2 | 4 | 3 | 5 | 4 | **27** |
+| Roadmap học tập theo khoảng cách kỹ năng | 4 | 4 | 2 | 3 | 4 | 4 | 3 | **24** |
 
 ### Giải thích điểm số
 
-- **PolicyMate:** actor và workflow cụ thể nhất; pain thể hiện qua việc phải mở nhiều tài liệu và kiểm tra hiệu lực. Có thể đo bằng cùng một bộ tác vụ tra cứu. Điểm “làm trong lab” là 4 thay vì 5 vì cần dữ liệu văn bản và metadata đủ sạch.
+- **PolicyMate:** actor và workflow cụ thể nhất; pain ban đầu thể hiện qua Problem Scan của thành viên, nhưng chưa có interview hoặc task log độc lập nên “pain có evidence” chỉ chấm 2/5. Điểm “làm trong lab” là 4 thay vì 5 vì cần dữ liệu văn bản và metadata đủ sạch.
 - **Giải thích quy định nhất quán:** impact đáng kể nhưng khó xác định ground truth nếu chưa có chuyên viên nghiệp vụ hoặc đơn vị có thẩm quyền duyệt cách diễn giải.
 - **Roadmap học tập:** dễ tạo prototype nhưng domain quá rộng; chất lượng roadmap và “kỹ năng còn thiếu” chưa có chuẩn đo thống nhất.
 
@@ -121,7 +123,7 @@ Nhóm chấm từ 1–5 theo cùng một bộ tiêu chí. Điểm dùng để l�
 ### Vì sao chọn
 
 - Bao phủ một workflow thật từ tìm kiếm, kiểm tra hiệu lực đến trích dẫn điều khoản.
-- Actor cụ thể: lãnh đạo, nhân viên và giảng viên cần tra cứu để xử lý nghiệp vụ.
+- Actor pilot cụ thể: giáo viên cần tìm lại quy định, thông báo hoặc hướng dẫn của trường để xử lý công việc.
 - Bottleneck cụ thể: search trả nhiều tài liệu nhưng người dùng vẫn phải mở file, tìm điều khoản và xác định văn bản còn hiệu lực.
 - Impact có thể đo: thời gian tra cứu, answer correctness, citation accuracy và version/effectiveness accuracy.
 - So sánh rõ được No AI/process fix, Rule, Workflow và Agent.
@@ -154,7 +156,7 @@ Nhóm không chọn bằng cách ưu tiên ý tưởng nghe “AI” nhất. Cá
 
 | Mã | Giả thuyết | Bằng chứng cần có | Ngưỡng ra quyết định |
 |---|---|---|---|
-| H1 | Người dùng thật sự mất nhiều thời gian tìm đúng văn bản có hiệu lực | 5–10 tác vụ tra cứu thực tế, ghi thời gian và số file phải mở | Median time đủ lớn để việc giảm 50% có ý nghĩa |
+| H1 | Giáo viên thật sự mất nhiều thời gian tìm đúng văn bản có hiệu lực | 5–10 tác vụ tra cứu thực tế, ghi thời gian và số file phải mở | Median hiện tại khoảng 10 phút trở lên và pain lặp lại ở nhiều người |
 | H2 | Pain chính nằm ở xác định hiệu lực/citation, không chỉ ở search từ khóa | Phỏng vấn 3–5 người và phân loại lỗi của các tác vụ mẫu | Phần lớn người dùng nhắc đến version, hiệu lực hoặc điều khoản |
 | H3 | Kho văn bản có thể lập chỉ mục với metadata tối thiểu | Audit một mẫu 30–50 văn bản | Có số hiệu, ngày ban hành, đơn vị, trạng thái và quan hệ sửa đổi hoặc có thể bổ sung |
 | H4 | Người dùng chấp nhận AI draft nếu luôn có nguồn để kiểm tra | Prototype test với câu trả lời kèm citation | Người dùng xác minh được nguồn và không hiểu AI là người quyết định |
@@ -186,10 +188,22 @@ Nên chọn ít nhất một người ở mỗi nhóm: chuyên viên nghiệp v�
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác | Nhóm sửa problem thế nào |
 |---|---:|---|---|---|
+| Problem Scan cá nhân | 1 quan sát | Giáo viên mất khoảng 10–20 phút để tìm đúng văn bản trên email, nhóm chat, website hoặc phải hỏi đồng nghiệp | Chưa đủ để khẳng định mọi giáo viên đều gặp với cùng mức độ | Thu hẹp actor pilot về giáo viên và giữ baseline 10–20 phút ở trạng thái tín hiệu ban đầu |
 | Interview | Chưa thực hiện | Chưa có | Chưa có | Chờ dữ liệu thật |
 | Survey / poll | Chưa thực hiện | Chưa có | Chưa có | Chờ dữ liệu thật |
-| Log tác vụ tra cứu | Chưa thu thập | Chưa có baseline | Chưa có | Không tuyên bố đã giảm 50% |
+| Log tác vụ tra cứu | Chưa thu thập | Chưa có baseline đã xác nhận | Chưa có | Chưa tuyên bố target dưới 5 phút là khả thi |
 | Mẫu kho văn bản | Chưa audit | Chưa rõ metadata/versioning | Chưa rõ | Giữ quyết định ở mức Not Yet |
+
+### Insight sau validation bước đầu
+
+```text
+Pain ban đầu không chỉ là “không tìm thấy file”.
+Giáo viên phải tìm qua nhiều kênh, sau đó vẫn cần biết tài liệu nào
+là nguồn chính thức và còn hiệu lực.
+
+Vì mới có một quan sát cá nhân, nhóm chưa được phép khái quát pain
+cho toàn trường hoặc coi 10–20 phút là baseline đã được xác nhận.
+```
 
 ## 3.4. Research giải pháp và pattern hiện có
 
@@ -197,10 +211,9 @@ Nên chọn ít nhất một người ở mỗi nhóm: chuyên viên nghiệp v�
 |---|---|---|---|---|---|
 | Google NotebookLM | [Use chat in NotebookLM](https://support.google.com/notebooklm/answer/16179559?hl=en) | Hỏi đáp trên các nguồn người dùng chọn và hiển thị citation dẫn về đoạn nguồn | Prototype nhanh cho pattern grounded Q&A; người dùng mở được context của citation | Không tự giải quyết trạng thái hiệu lực, quan hệ sửa đổi hoặc mô hình phân quyền đặc thù của trường | Citation giúp kiểm tra, nhưng citation đúng file chưa đồng nghĩa văn bản còn hiệu lực |
 | Azure AI Search — document-level access | [Document-Level Access Control](https://learn.microsoft.com/en-us/azure/search/search-document-level-access-overview) | Giới hạn kết quả tìm kiếm theo quyền ở cấp tài liệu bằng security filters/ACL/RBAC | Có pattern security trimming và tích hợp danh tính | Một số cơ chế native còn ở preview; ACL stale hoặc cấu hình sai có thể gây rủi ro | Phân quyền phải được kiểm soát ở retrieval layer, không chỉ bằng prompt |
-| Azure AI Search — query-time enforcement | [Query-Time ACL and RBAC Enforcement](https://learn.microsoft.com/en-us/azure/search/search-query-access-control-rbac-enforcement) | Lọc kết quả theo user/group tại thời điểm truy vấn | Không trả nội dung không được phép nếu kiểm tra ACL thất bại | Cần đồng bộ quyền và thiết kế fail-closed; có giới hạn theo nguồn dữ liệu | PolicyMate phải fail closed: lỗi phân quyền thì không trả một phần kết quả |
 | PowerDMS policy management | [PowerDMS Policy overview](https://www.powerdms.com/hubfs/Executive%20Summary/powerdms-policy-onesheet-2022.pdf?hsLang=en) | Quản lý chính sách tập trung, version control, tracking và search | Cho thấy metadata/version control là năng lực lõi trước AI | Không chứng minh rằng AI có thể tự xác định hiệu lực đúng trong kho dữ liệu chưa chuẩn hóa | Có thể cần policy management/process fix trước khi xây trợ lý AI |
 
-## 3.5. Research benchmark cho target 85% và giảm 50%
+## 3.5. Research tham khảo để thiết kế metric
 
 ### Bằng chứng tham khảo
 
@@ -218,21 +231,21 @@ Nên chọn ít nhất một người ở mỗi nhóm: chuyên viên nghiệp v�
 Nhóm **không** dùng các con số bên ngoài để tuyên bố PolicyMate đã đạt kết quả. Research chỉ hỗ trợ:
 
 - xác nhận knowledge retrieval là bài toán có thể tạo tác động về thời gian;
-- đặt `giảm ≥50% median time-to-answer` làm **stretch target** cho pilot;
+- đặt `dưới 5 phút cho một tác vụ tra cứu` làm **target cần kiểm chứng** từ tín hiệu ban đầu 10–20 phút;
 - đặt `answer correctness ≥85%` làm **ngưỡng chấp nhận nội bộ**, không phải benchmark mặc định của thị trường;
-- tách riêng `citation accuracy ≥95%`, `version accuracy = 100%` và `access violation = 0`;
+- yêu cầu mọi câu trả lời trong pilot có citation đúng; dùng sai phiên bản hoặc vượt quyền là lỗi chặn;
 - thiết kế benchmark nội bộ có câu hỏi, đáp án và citation do chuyên viên duyệt.
 
 ### Lập luận cho target thời gian
 
-Microsoft Research ghi nhận mức cải thiện 12% ở tác vụ tạo tài liệu, trong khi Zenken báo cáo 30–50% trên nhiều tác vụ tri thức và Morgan Stanley ghi nhận khả năng tiếp cận tài liệu tăng đáng kể sau khi triển khai trợ lý nội bộ. Các kết quả khác nhau cho thấy mức tiết kiệm phụ thuộc mạnh vào workflow. Vì PolicyMate tập trung vào bước tìm kiếm và đối chiếu đang làm thủ công, nhóm giữ mục tiêu giảm ít nhất 50% làm stretch target, nhưng chỉ kết luận đạt khi đo trên cùng bộ 5–10 tác vụ trước và sau pilot.
+Các case bên ngoài cho thấy AI có thể hỗ trợ một số tác vụ tri thức, nhưng mức tiết kiệm phụ thuộc mạnh vào workflow và dữ liệu. Vì vậy, nhóm không suy ra target thời gian từ các case này. Target dưới 5 phút chỉ là giả thuyết pilot, cần đo trên cùng một bộ tác vụ trước và sau.
 
 ### Lập luận cho target chất lượng
 
 Legal-DC cho thấy đánh giá RAG văn bản pháp lý cần ground truth gắn với điều khoản và đánh giá đồng thời retrieval lẫn generation. NIST cũng nhấn mạnh tính chính xác và khả năng kiểm chứng bằng citation. Tuy nhiên, benchmark OfficeQA Pro cho thấy tài liệu scan, file cũ và tài liệu dài vẫn gây khó cho hệ thống hiện đại. Vì vậy:
 
 - `answer correctness ≥85%` là ngưỡng pilot do nhóm đề xuất, cần chuyên viên chấm;
-- `citation accuracy ≥95%` kiểm tra số hiệu, điều/khoản và đoạn nguồn;
+- mọi câu trả lời được hiển thị trong pilot phải có citation đúng số hiệu, điều/khoản và đoạn nguồn;
 - citation đúng nhưng dùng văn bản hết hiệu lực vẫn tính là lỗi;
 - `version accuracy = 100%` và `access violation = 0` là gate bắt buộc trong phạm vi pilot.
 
@@ -242,7 +255,7 @@ Legal-DC cho thấy đánh giá RAG văn bản pháp lý cần ground truth gắ
 Research hỗ trợ tính khả thi và cách thiết kế metric,
 nhưng không thay thế validation trên dữ liệu của trường.
 
-Target 85% và giảm 50% vẫn mang trạng thái:
+Target 85% và dưới 5 phút vẫn mang trạng thái:
 “mục tiêu cần kiểm chứng”, không phải “kết quả đã đạt”.
 ```
 
@@ -273,9 +286,9 @@ Một câu trả lời có citation vẫn có thể sai nếu citation đến t�
 ## 4.1. Current workflow
 
 ```text
-CURRENT STATE — baseline chưa đo
+CURRENT STATE — tín hiệu ban đầu khoảng 10–20 phút/lần, chưa được xác nhận độc lập
 
-[1 Người dùng phát sinh câu hỏi nghiệp vụ]
+[1 Giáo viên phát sinh nhu cầu tìm quy định/hướng dẫn]
 → [2 Tự nghĩ từ khóa]
 → [3 Tìm trong thư mục/cổng văn bản hoặc hỏi đồng nghiệp]
 → [4 Mở và đọc nhiều tài liệu gần giống nhau]
@@ -287,7 +300,7 @@ CURRENT STATE — baseline chưa đo
 
 | Bước | Actor | Input | Output | Thời gian/tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | Lãnh đạo/nhân viên/giảng viên | Tình huống nghiệp vụ | Câu hỏi cần tra cứu | Chưa đo | Câu hỏi thường dùng ngôn ngữ nghiệp vụ, không trùng từ trong văn bản |
+| 1 | Giáo viên | Tình huống công việc | Câu hỏi cần tra cứu | Chưa đo riêng từng bước | Câu hỏi có thể dùng ngôn ngữ đời thường, không trùng từ trong văn bản |
 | 2 | Người tra cứu | Câu hỏi | Bộ từ khóa | Chưa đo | Có thể bỏ sót thuật ngữ pháp lý/hành chính |
 | 3 | Người tra cứu/đồng nghiệp | Từ khóa, kinh nghiệm cá nhân | Danh sách file khả dĩ | Chưa đo | Nguồn phân tán, phụ thuộc trí nhớ |
 | 4 | Người tra cứu | Nhiều file | Các đoạn có vẻ liên quan | Chưa đo | File khác định dạng, tên gần giống |
@@ -306,7 +319,7 @@ FUTURE STATE — mục tiêu cần validation
 [1 Người dùng đăng nhập và đặt câu hỏi]
 → [2 Rule kiểm tra vai trò/quyền truy cập]  <-- fail closed
 → [3 Workflow chuẩn hóa câu hỏi và truy xuất tài liệu được phép]
-→ [4 Rule lọc metadata: loại văn bản hết hiệu lực/thay thế]
+→ [4 Rule xác định phiên bản có hiệu lực tại thời điểm được hỏi]
 → [5 AI xếp đoạn liên quan và draft câu trả lời]
 → [6 Hệ thống gắn số hiệu, điều/khoản, phiên bản và link nguồn]
 → [7 Kiểm tra tự động: thiếu citation/xung đột/độ tin cậy thấp?]
@@ -326,13 +339,13 @@ Fallback:
 
 | Metric | Trước | Sau kỳ vọng | Cách đo / ghi chú |
 |---|---:|---:|---|
-| Tổng thời gian/tác vụ | Chưa đo | Giảm ≥50% so với baseline | Median của cùng bộ 5–10 tác vụ |
+| Tổng thời gian/tác vụ | Tín hiệu ban đầu 10–20 phút | Dưới 5 phút trong pilot | Median của cùng bộ tối thiểu 10 tác vụ trước/sau; cần xác nhận baseline |
 | Answer correctness | Chưa đo | ≥85% | Chuyên viên chấm trên bộ câu hỏi có ground truth |
-| Citation accuracy | Chưa đo | ≥95% | Đúng số hiệu, điều/khoản và đoạn nguồn |
+| Citation accuracy | Chưa đo | 100% câu trả lời hiển thị có citation đúng | Đúng số hiệu, điều/khoản và đoạn nguồn; nếu không có nguồn thì không hiển thị kết luận |
 | Hiệu lực/version accuracy | Chưa đo | 100% trên pilot | Không chấp nhận dùng nhầm văn bản hết hiệu lực |
 | Câu trả lời không có nguồn | Chưa đo | 0 | Hệ thống phải abstain |
 | Truy cập vượt quyền | Chưa đo | 0 | Test bằng các role khác nhau |
-| Số bước thủ công | 8/8 theo workflow giả định | 2/9 | Người thật vẫn kiểm tra và quyết định |
+| Số bước thủ công | 8/8 theo workflow giả định | 3/9 | Giáo viên đặt câu hỏi, kiểm tra nguồn; người có thẩm quyền quyết định |
 | Bottleneck chính | Tìm và đối chiếu văn bản | Kiểm tra draft/exception | Bottleneck mới là human boundary có chủ đích |
 | Risk mới | Dùng nhầm file thủ công | Hallucination, citation sai, rò quyền, metadata stale | Cần audit và fallback |
 
@@ -340,11 +353,11 @@ Fallback:
 
 | Field | Nội dung |
 |---|---|
-| **Actor** | Lãnh đạo, nhân viên và giảng viên trường đại học cần tra cứu quy định/quy chế để xử lý công việc. |
+| **Actor** | Giáo viên cần tìm lại quy định, thông báo hoặc hướng dẫn chính thức của trường để xử lý công việc. |
 | **Workflow** | Diễn giải nhu cầu thành từ khóa → tìm trong kho nội bộ/hỏi đồng nghiệp → mở nhiều file → kiểm tra số hiệu và hiệu lực → đối chiếu sửa đổi → trích điều khoản → người có thẩm quyền quyết định. |
 | **Bottleneck** | Xác định đúng văn bản, đúng phiên bản có hiệu lực và đúng điều/khoản; tài liệu phân tán, khác định dạng và có thể tồn tại nhiều phiên bản. |
-| **Impact** | Mất thời gian tra cứu, trả lời chậm và có nguy cơ viện dẫn nhầm văn bản hoặc điều khoản. Baseline chưa được đo. |
-| **Success Metric** | Giảm ≥50% median time-to-answer; answer correctness ≥85%; citation accuracy ≥95%; không dùng nhầm văn bản hết hiệu lực và không truy cập vượt quyền trong pilot. |
+| **Impact** | Một quan sát ban đầu cho thấy mỗi lần tìm có thể mất khoảng 10–20 phút hoặc phải hỏi đồng nghiệp; có nguy cơ viện dẫn nhầm văn bản. Mức độ phổ biến chưa được validation. |
+| **Success Metric** | Trong pilot, giảm median time-to-answer xuống dưới 5 phút; ít nhất 85% câu trả lời đạt ground truth chuyên viên duyệt; 100% câu trả lời có citation đúng và không dùng sai phiên bản hoặc vượt quyền. |
 | **Boundary** | Chỉ dùng tài liệu chính thức mà người dùng có quyền xem; không tự quyết định hiệu lực khi metadata chưa rõ; không thay chuyên viên hoặc người có thẩm quyền; không trả lời kết luận khi thiếu nguồn. |
 
 ---
@@ -383,11 +396,11 @@ Fallback:
 
 | Field | Nội dung |
 |---|---|
-| **Actor** | Lãnh đạo, nhân viên và giảng viên trường đại học có quyền truy cập khác nhau, cần tra cứu văn bản/quy chế để xử lý công việc. |
-| **Workflow** | Phát sinh câu hỏi → tìm/hỏi đồng nghiệp → mở nhiều file → kiểm tra số hiệu và hiệu lực → đối chiếu sửa đổi → trích điều khoản → kiểm tra → quyết định. |
+| **Actor** | Giáo viên cần tìm lại quy định, thông báo hoặc hướng dẫn chính thức của trường để xử lý công việc. |
+| **Workflow** | Phát sinh nhu cầu → tìm trong email/nhóm chat/website hoặc hỏi đồng nghiệp → mở nhiều file → kiểm tra số hiệu và hiệu lực → đối chiếu sửa đổi → trích điều khoản → xác minh trước khi sử dụng. |
 | **Bottleneck** | Bước xác định đúng văn bản, phiên bản có hiệu lực và điều/khoản áp dụng; search từ khóa không biểu diễn đủ câu hỏi nghiệp vụ và quan hệ giữa các phiên bản. |
-| **Impact** | Tra cứu chậm, phụ thuộc kinh nghiệm cá nhân và có nguy cơ viện dẫn nhầm nguồn. Baseline vẫn cần đo bằng tác vụ thực tế. |
-| **Success Metric** | Giảm ≥50% median time-to-answer; answer correctness ≥85%; citation accuracy ≥95%; 100% pilot không dùng nhầm văn bản hết hiệu lực; 0 kết quả vượt quyền; 0 kết luận không có nguồn. |
+| **Impact** | Tín hiệu ban đầu cho thấy mỗi lần tìm có thể mất 10–20 phút hoặc phải hỏi đồng nghiệp; có nguy cơ dùng nhầm văn bản. Cần validation với nhiều giáo viên hơn. |
+| **Success Metric** | Trong pilot, median time-to-answer dưới 5 phút; ít nhất 85% câu trả lời đạt ground truth; mọi câu trả lời hiển thị đều có citation đúng; không dùng sai phiên bản, không vượt quyền và không kết luận khi thiếu nguồn. |
 | **Boundary** | Chỉ retrieval trên tài liệu chính thức được phép; không tự xác lập hiệu lực khi thiếu metadata; không thay chuyên viên hoặc người có thẩm quyền; không tự thực hiện quyết định; fail closed khi lỗi quyền. |
 | **AI intervention point** | Sau khi xác thực/phân quyền và retrieval các tài liệu hợp lệ, trước bước người dùng/chuyên viên kiểm tra câu trả lời. |
 | **Mức chọn** | Workflow: process fix + rule/metadata + retrieval/AI draft + human review. |
@@ -406,12 +419,16 @@ Fallback:
 
 **Decision hiện tại:**
 
+```text
+Not Yet.
+```
+
 **Lý do:**
 
 - Problem, actor, workflow và boundary đã đủ rõ để tiếp tục nghiên cứu.
 - AI có điểm can thiệp hợp lý ở bước hiểu câu hỏi và draft có citation.
 - Tuy nhiên, chưa có baseline, ground truth, audit metadata/hiệu lực, kiểm tra ACL hoặc owner chịu trách nhiệm.
-- Chọn Go ngay lúc này sẽ biến target 85% và giảm 50% thành tuyên bố không có bằng chứng.
+- Chọn Go ngay lúc này sẽ biến target 85% và dưới 5 phút thành tuyên bố không có bằng chứng.
 
 **Pilot nhỏ nhất sau khi đủ điều kiện:**
 
@@ -429,7 +446,7 @@ Fallback:
 - ACL test không có trường hợp vượt quyền.
 - Bộ ground truth được chuyên viên phê duyệt.
 - Baseline cho thấy pain đủ lớn.
-- Prototype đạt correctness ≥85%, citation accuracy ≥95%, không dùng nhầm văn bản hết hiệu lực và giảm ≥50% median time.
+- Prototype đạt correctness ≥85%, mọi câu trả lời hiển thị có citation đúng, không dùng nhầm văn bản hết hiệu lực và median time dưới 5 phút.
 
 **Exit / rollback:**
 
@@ -452,4 +469,3 @@ AI không có quyền:
 - gán phát biểu/đóng góp cho thành viên khi không có bằng chứng;
 - biến target thành kết quả đã đo;
 - quyết định thay nhóm.
-
