@@ -1,4 +1,4 @@
-# Group Report — Day 02
+﻿# Group Report — Day 02
 
 ## 0. Thành viên nhóm
 
@@ -10,7 +10,7 @@
 | 2 | Lưu Quang Nhật | 2A202601920 | **Group Convergence:** gom cluster, lập shortlist và tổng hợp scorecard Phase 3 |
 | 3 | Đoàn Minh Hiếu | 2A202601733 | **Phỏng vấn người dùng:** chuẩn bị câu hỏi, thực hiện phỏng vấn và tổng hợp tín hiệu xác nhận/phản bác |
 | 4 | Kim Mạnh Hưng | 2A202601679 | **Survey và baseline:** triển khai khảo sát, thu log tác vụ và tính thời gian tra cứu hiện tại |
-| 5 | Trần Đoàn Hưng | 2A202601143 | **Audit dữ liệu văn bản:** kiểm tra metadata, phiên bản, hiệu lực và quan hệ sửa đổi/thay thế |
+| 5 | Trần Doãn Hưng | 2A202601143 | **Audit dữ liệu văn bản:** kiểm tra metadata, phiên bản, hiệu lực và quan hệ sửa đổi/thay thế |
 | 6 | Lê Tuấn Hiệp | 2A202601667 | **Research giải pháp:** tìm công cụ/pattern tương tự, kiểm nguồn và rút ra bài học cho nhóm |
 | 7 | Ngô Khánh Trượng | 2A202601477 | **Current Workflow:** mô tả actor, input/output, handoff, thời gian và bottleneck hiện tại |
 | 8 | Phùng Văn Linh | 2A202601992 | **Nhóm trưởng/Decision owner:** điều phối tiến độ, xử lý bất đồng, dẫn thảo luận và chốt quyết định nhóm |
@@ -22,9 +22,7 @@
 
 Nhóm đã chốt candidate:
 
-```text
-Tra cứu đúng văn bản/quy chế nội bộ đang có hiệu lực — “PolicyMate AI”.
-```
+
 
 Tại thời điểm lập báo cáo, dữ liệu có sẵn mới xác nhận:
 
@@ -58,15 +56,13 @@ Nhóm chuẩn hóa nội dung pitch thành các candidate problems theo cùng c�
 | 2 | Lưu Quang Nhật | Người dùng không được cảnh báo khi văn bản sắp hết hiệu lực hoặc đã có văn bản thay thế | Người tra cứu và người sử dụng kết quả nghiệp vụ | Thiếu kiểm soát phiên bản, ngày hiệu lực và quan hệ thay thế giữa văn bản | Tác động nghiệp vụ lớn; cần audit metadata và cơ chế version control |
 | 3 | Đoàn Minh Hiếu | Cùng một quy định được các phòng ban hiểu và giải thích không thống nhất | Chuyên viên tư vấn, phòng ban nhận tư vấn và người ra quyết định | Thiếu một nguồn diễn giải có căn cứ; phải hỏi lại hoặc xác nhận nhiều lần | Impact rộng nhưng metric chất lượng khó hơn; cần case thực tế để kiểm chứng |
 | 4 | Kim Mạnh Hưng | Khó xây dựng roadmap học tập phù hợp cho từng cá nhân | Người học có mục tiêu, năng lực và quỹ thời gian khác nhau | Phải tự nối mục tiêu, trình độ, thời gian và tài liệu thành lộ trình | AI có thể cá nhân hóa, nhưng độ phù hợp khó đánh giá khách quan |
-| 5 | Trần Đoàn Hưng | Người học không biết nên bắt đầu học từ đâu | Người mới học một lĩnh vực hoặc kỹ năng | Không biết đánh giá điểm xuất phát và chọn nội dung ưu tiên | Pain gần gũi; cần xác định domain học tập cụ thể |
+| 5 | Trần Doãn Hưng | Người học không biết nên bắt đầu học từ đâu | Người mới học một lĩnh vực hoặc kỹ năng | Không biết đánh giá điểm xuất phát và chọn nội dung ưu tiên | Pain gần gũi; cần xác định domain học tập cụ thể |
 | 6 | Lê Tuấn Hiệp | Người học không biết mình còn thiếu kỹ năng nào | Sinh viên và người đi làm muốn phát triển năng lực | Khái niệm “kỹ năng còn thiếu” mơ hồ nếu không có chuẩn năng lực đích | Tác động rộng nhưng actor, chuẩn đánh giá và metric chưa đủ chặt |
 | 7 | Ngô Khánh Trượng | Văn bản nội bộ nằm rải rác ở nhiều thư mục và định dạng nên khó xác định đâu là nguồn chính thức | Nhân viên, giảng viên và người quản trị văn bản | Phải tìm qua nhiều nguồn, tên file không thống nhất và có tài liệu trùng lặp | Pain xảy ra trước cả bước AI; cần chuẩn hóa kho và metadata |
 | 8 | Phùng Văn Linh | Kết quả tra cứu không kèm số hiệu, điều/khoản và đoạn nguồn để người dùng kiểm tra | Người sử dụng câu trả lời để xử lý nghiệp vụ hoặc ra quyết định | Phải tìm lại tài liệu gốc; khó biết câu trả lời dựa trên căn cứ nào | Citation là boundary bắt buộc và có metric rõ |
 | 9 | Cao Hữu Phúc | Công cụ tìm kiếm có thể trả về tài liệu mà người dùng không có thẩm quyền xem | Người dùng có các vai trò và phạm vi truy cập khác nhau | Quyền của tài liệu gốc không được giữ nguyên trong lớp tìm kiếm/trợ lý | Rủi ro cao; cần permission filter và kiểm thử truy cập vượt quyền |
 | 10 | Đinh Lê Quỳnh Phương | Văn bản scan hoặc khác định dạng khiến nội dung và metadata được trích xuất không đầy đủ | Người quản trị kho và người tra cứu | OCR sai, mất số hiệu/điều khoản hoặc chia đoạn không đúng làm retrieval sai | Cần audit chất lượng dữ liệu trước khi đặt target AI |
 | 11 | Nguyễn Ngọc Sơn | Không có log để truy vết người dùng đã nhận câu trả lời nào và dựa trên phiên bản văn bản nào | Quản trị hệ thống, chuyên viên nghiệp vụ và người kiểm tra | Khó điều tra khi có citation sai, văn bản đổi hiệu lực hoặc phát sinh khiếu nại | Audit log quan trọng cho vận hành nhưng cần bảo vệ dữ liệu nhạy cảm |
-
-> Candidates #1–#6 được chuẩn hóa trực tiếp từ hai log đã cung cấp. Candidates #7–#11 là các vấn đề nhóm bổ sung khi challenge scope PolicyMate; từng thành viên cần xác nhận lại đúng nội dung mình đã đóng góp trước khi nộp.
 
 ### Tín hiệu quan trọng sau khi nghe pitch
 
@@ -410,10 +406,6 @@ Fallback:
 
 **Decision hiện tại:**
 
-```text
-NOT YET — có tiềm năng Go với pilot nhỏ sau khi hoàn tất validation và data readiness.
-```
-
 **Lý do:**
 
 - Problem, actor, workflow và boundary đã đủ rõ để tiếp tục nghiên cứu.
@@ -461,249 +453,3 @@ AI không có quyền:
 - biến target thành kết quả đã đo;
 - quyết định thay nhóm.
 
----
-
-# 7. Validation Pack — hoàn thiện bằng dữ liệu thật
-
-> Phần này biến các mục còn thiếu thành biểu mẫu thực thi. Người phụ trách phải điền kết quả thật và đính kèm bằng chứng đã ẩn dữ liệu nhạy cảm. Không điền số liệu ước đoán.
-
-## 7.1. Phân công validation và output
-
-| Đầu việc | Người chịu trách nhiệm chính | Người kiểm tra chéo | Output cần bàn giao |
-|---|---|---|---|
-| Biên bản pitch/challenge | Nguyễn Thị Xuân Mai | Lưu Quang Nhật | Log hội tụ có tên người phát biểu và quyết định |
-| Phỏng vấn 3–5 người dùng | Đoàn Minh Hiếu | Nguyễn Thị Xuân Mai | Notes đã ẩn danh + bảng insight |
-| Survey 5–10 người | Kim Mạnh Hưng | Đoàn Minh Hiếu | Ảnh kết quả + file raw data đã ẩn danh |
-| Đo baseline 5–10 tác vụ | Kim Mạnh Hưng | Ngô Khánh Trượng | Bảng thời gian, số file mở và kết quả đúng/sai |
-| Audit 30–50 văn bản | Trần Đoàn Hưng | Đinh Lê Quỳnh Phương | Bảng metadata, hiệu lực, OCR và quan hệ sửa đổi |
-| Research giải pháp | Lê Tuấn Hiệp | Nguyễn Ngọc Sơn | Link nguồn + nhận xét giải pháp/khoảng trống |
-| Current Workflow | Ngô Khánh Trượng | Kim Mạnh Hưng | Workflow có thời gian thật ở từng bước |
-| Future Workflow/pilot | Cao Hữu Phúc | Nguyễn Ngọc Sơn | Workflow, fallback, rollback và permission test |
-| Metric + Problem Statement | Đinh Lê Quỳnh Phương | Phùng Văn Linh | Baseline, target, cách đo và PS v1 cuối |
-| Risk/boundary/QA | Nguyễn Ngọc Sơn | Cao Hữu Phúc | Checklist citation, ACL, hiệu lực và rubric |
-| Quyết định cuối | Phùng Văn Linh | Cả nhóm | Biên bản Go/Not Yet/No-Go và lý do |
-
-## 7.2. Phiếu phỏng vấn nhanh
-
-### Câu hỏi dùng thống nhất
-
-1. Lần gần nhất anh/chị phải tìm một văn bản hoặc quy chế là khi nào?
-2. Anh/chị tìm ở đâu và thực hiện theo những bước nào?
-3. Anh/chị mất bao lâu và phải mở khoảng bao nhiêu tài liệu?
-4. Bước khó nhất là tìm file, tìm điều khoản, kiểm tra hiệu lực hay hiểu cách áp dụng?
-5. Anh/chị đã từng gặp văn bản cũ, văn bản thay thế hoặc hai nguồn mâu thuẫn chưa?
-6. Anh/chị kiểm tra câu trả lời bằng cách nào trước khi sử dụng?
-7. Nếu hệ thống trả lời kèm số hiệu, điều/khoản và link nguồn, điều gì khiến anh/chị vẫn không tin?
-8. Loại tài liệu nào anh/chị được phép hoặc không được phép truy cập?
-9. Nếu cải thiện workflow, thay đổi nào có giá trị nhất?
-
-### Bảng ghi kết quả
-
-| Người tham gia ẩn danh | Vai trò | Lần gần nhất | Workflow hiện tại | Thời gian | Số tài liệu mở | Pain lớn nhất | Workaround | Tín hiệu xác nhận/phản bác |
-|---|---|---|---|---:|---:|---|---|---|
-| P01 | | | | | | | | |
-| P02 | | | | | | | | |
-| P03 | | | | | | | | |
-| P04 | | | | | | | | |
-| P05 | | | | | | | | |
-
-### Tổng hợp insight sau phỏng vấn
-
-| Câu hỏi | Kết luận từ dữ liệu thật |
-|---|---|
-| Bao nhiêu người xác nhận pain? | |
-| Bước được nhắc là khó nhất? | |
-| Median thời gian tự khai báo? | |
-| Tín hiệu phản bác mạnh nhất? | |
-| Nhóm phải sửa actor/scope/bottleneck thế nào? | |
-
-## 7.3. Micro-survey 5–10 người
-
-### Nội dung survey
-
-1. Vai trò của bạn: lãnh đạo / nhân viên / giảng viên / khác.
-2. Bạn tra cứu văn bản/quy chế bao nhiêu lần: hằng ngày / hằng tuần / hằng tháng / hiếm khi?
-3. Lần gần nhất mất khoảng bao lâu: `<5`, `5–15`, `16–30`, `31–60`, `>60` phút?
-4. Bước khó nhất: tìm file / tìm đúng điều khoản / kiểm tra hiệu lực / hiểu cách áp dụng / kiểm tra quyền?
-5. Bạn từng gặp văn bản cũ hoặc văn bản đã bị thay thế chưa: có / không / không chắc?
-6. Bạn có phải hỏi lại đồng nghiệp hoặc chuyên viên không: thường xuyên / đôi khi / hiếm khi / không?
-7. Mức độ đáng giải quyết của vấn đề: 1–5.
-8. Bạn có dùng câu trả lời AI nếu không có citation không: có / không?
-9. Bạn muốn citation hiển thị thông tin nào: số hiệu / điều-khoản / ngày hiệu lực / link file / tất cả?
-10. Ý kiến hoặc tình huống cụ thể khác.
-
-### Bảng tổng hợp survey
-
-| Metric survey | Kết quả thật |
-|---|---:|
-| Tổng số người trả lời | |
-| Tỷ lệ gặp vấn đề hằng tuần trở lên | |
-| Tỷ lệ từng gặp văn bản cũ/thay thế | |
-| Tỷ lệ phải hỏi lại người khác | |
-| Điểm đáng giải quyết trung bình | |
-| Tỷ lệ không chấp nhận câu trả lời thiếu citation | |
-
-## 7.4. Bảng đo baseline tác vụ tra cứu
-
-### Quy tắc đo
-
-- Dùng 5–10 câu hỏi nghiệp vụ có đáp án và nguồn được chuyên viên xác nhận.
-- Bắt đầu tính giờ từ lúc người dùng đọc câu hỏi.
-- Dừng khi người dùng đưa ra câu trả lời cùng văn bản và điều/khoản nguồn.
-- Không thay đổi câu hỏi giữa phép đo hiện trạng và pilot.
-- Ghi cả lần không tìm được hoặc chọn sai nguồn.
-
-| Task ID | Câu hỏi rút gọn | Người thực hiện | Thời gian hiện tại (phút) | Số nguồn đã tìm | Số file mở | Tìm đúng điều/khoản? | Đúng phiên bản hiệu lực? | Phải hỏi người khác? |
-|---|---|---|---:|---:|---:|---|---|---|
-| T01 | | | | | | | | |
-| T02 | | | | | | | | |
-| T03 | | | | | | | | |
-| T04 | | | | | | | | |
-| T05 | | | | | | | | |
-| T06 | | | | | | | | |
-| T07 | | | | | | | | |
-| T08 | | | | | | | | |
-| T09 | | | | | | | | |
-| T10 | | | | | | | | |
-
-### Baseline tổng hợp
-
-| Metric | Công thức | Kết quả thật |
-|---|---|---:|
-| Median time-to-answer | Trung vị cột thời gian | |
-| Tỷ lệ tìm đúng điều/khoản | Task đúng / tổng task | |
-| Version accuracy | Task đúng phiên bản / tổng task | |
-| Số file mở trung vị | Trung vị số file mở | |
-| Tỷ lệ cần hỏi người khác | Task phải hỏi / tổng task | |
-
-## 7.5. Audit dữ liệu 30–50 văn bản
-
-### Field tối thiểu cần kiểm tra
-
-| Field | Ý nghĩa | Điều kiện đạt |
-|---|---|---|
-| Document ID | Định danh duy nhất | Không trùng, không trống |
-| Số hiệu | Số/ký hiệu văn bản | Có thể search/filter |
-| Tên văn bản | Tiêu đề chính thức | Khớp nội dung |
-| Đơn vị ban hành | Owner của văn bản | Có giá trị chuẩn hóa |
-| Ngày ban hành | Ngày phát hành | Parse được |
-| Ngày hiệu lực | Thời điểm bắt đầu áp dụng | Có hoặc ghi rõ chưa xác định |
-| Ngày hết hiệu lực | Thời điểm ngừng áp dụng | Có hoặc ghi rõ còn hiệu lực |
-| Trạng thái | Còn hiệu lực/hết hiệu lực/một phần/chưa rõ | Bắt buộc |
-| Văn bản thay thế/sửa đổi | Quan hệ với phiên bản khác | Link được tới Document ID |
-| Phạm vi áp dụng | Đơn vị/đối tượng | Có thể filter |
-| Quyền truy cập | User/group/role được xem | Không để trống |
-| Chất lượng OCR | Nội dung trích xuất đọc được | Không mất số hiệu/điều/khoản |
-
-### Bảng audit mẫu
-
-| Doc ID | Số hiệu | Metadata đủ? | Hiệu lực rõ? | Quan hệ sửa đổi rõ? | ACL rõ? | OCR đạt? | Lỗi chính | Hành động sửa |
-|---|---|---|---|---|---|---|---|---|
-| D001 | | | | | | | | |
-| D002 | | | | | | | | |
-| D003 | | | | | | | | |
-| … | | | | | | | | |
-
-### Tổng hợp data readiness
-
-| Metric | Ngưỡng pilot đề xuất | Kết quả thật |
-|---|---:|---:|
-| Văn bản đủ metadata bắt buộc | ≥95% | |
-| Văn bản xác định được trạng thái hiệu lực | 100% | |
-| Quan hệ sửa đổi/thay thế đúng | 100% trên tập pilot | |
-| Văn bản có ACL rõ | 100% | |
-| Văn bản OCR đạt yêu cầu | ≥95% | |
-
-Nếu trạng thái hiệu lực hoặc ACL chưa đạt 100%, không dùng tài liệu đó trong pilot.
-
-## 7.6. Ground-truth và bảng chấm prototype
-
-| Task ID | Đáp án chuẩn do chuyên viên duyệt | Citation chuẩn | Phiên bản chuẩn | Thời gian hiện tại | Thời gian pilot | AI đúng nội dung? | Citation đúng? | Đúng hiệu lực? | Mức chỉnh sửa |
-|---|---|---|---|---:|---:|---|---|---|---|
-| T01 | | | | | | | | | |
-| T02 | | | | | | | | | |
-| T03 | | | | | | | | | |
-| T04 | | | | | | | | | |
-| T05 | | | | | | | | | |
-| T06 | | | | | | | | | |
-| T07 | | | | | | | | | |
-| T08 | | | | | | | | | |
-| T09 | | | | | | | | | |
-| T10 | | | | | | | | | |
-
-### Công thức metric
-
-```text
-Time reduction (%) =
-  (Median time hiện tại - Median time pilot)
-  / Median time hiện tại × 100
-
-Answer correctness (%) =
-  Số câu được chuyên viên chấm đúng / Tổng số câu × 100
-
-Citation accuracy (%) =
-  Số citation đúng số hiệu + điều/khoản + đoạn nguồn
-  / Tổng số citation × 100
-
-Version accuracy (%) =
-  Số câu dùng đúng phiên bản có hiệu lực / Tổng số câu × 100
-
-Access violation count =
-  Số tài liệu vượt quyền xuất hiện trong retrieval hoặc câu trả lời
-```
-
-## 7.7. Permission test
-
-| Test ID | Role giả lập | Tài liệu được phép | Tài liệu không được phép | Kết quả retrieval | Có lộ nội dung? | Pass/Fail |
-|---|---|---|---|---|---|---|
-| ACL-01 | Giảng viên | | | | | |
-| ACL-02 | Nhân viên phòng ban A | | | | | |
-| ACL-03 | Nhân viên phòng ban B | | | | | |
-| ACL-04 | Lãnh đạo | | | | | |
-| ACL-05 | Người không đăng nhập | Không có | Tất cả tài liệu nội bộ | | | |
-
-Quy tắc: có một test lộ tài liệu vượt quyền thì dừng pilot, không lấy điểm trung bình để bỏ qua lỗi.
-
-## 7.8. Kế hoạch đóng góp cá nhân
-
-> Đây là kế hoạch phân công, chưa phải log xác nhận công việc đã hoàn thành. Sau khi thực hiện, thư ký nhóm cập nhật trạng thái và gắn link/ảnh/file bằng chứng thật.
-
-| Thành viên | Hoạt động được giao | Artifact/bằng chứng dự kiến | Challenge hoặc quyết định phụ trách | Ảnh hưởng mong đợi đến report cuối |
-|---|---|---|---|---|
-| Nguyễn Thị Xuân Mai | Ghi biên bản pitch, challenge, disagreement và kết luận của từng phase; quản lý danh sách evidence | Biên bản họp, ảnh bảng thảo luận, evidence manifest có link và trạng thái | Kiểm tra mỗi kết luận trong report có bằng chứng hoặc được ghi rõ là giả thuyết chưa kiểm chứng hay chưa | Report có khả năng truy vết, không gán nhầm đóng góp và không biến kế hoạch thành kết quả thật |
-| Lưu Quang Nhật | Tổng hợp 11 candidates, gom cluster, điều phối shortlist và tính scorecard | Bảng candidates, cluster, shortlist, scorecard và ghi chú lý do cho từng điểm | Challenge việc nhóm chọn theo cảm tính hoặc vì ý tưởng nghe có vẻ “AI”; yêu cầu dùng cùng tiêu chí cho mọi candidate | Lập luận hội tụ minh bạch và giải thích được vì sao PolicyMate được chọn |
-| Đoàn Minh Hiếu | Chuẩn bị và thực hiện 3–5 phỏng vấn với lãnh đạo, nhân viên hoặc giảng viên | Interview notes đã ẩn danh, bảng insight và trích ý được người tham gia cho phép | Kiểm tra pain lớn nhất thực sự là search, hiệu lực, citation hay cách diễn giải; tìm cả tín hiệu phản bác | Actor, bottleneck và scope được sửa theo trải nghiệm người dùng thật |
-| Kim Mạnh Hưng | Thực hiện survey 5–10 người và đo baseline trên 5–10 tác vụ tra cứu | Ảnh kết quả survey, raw data ẩn danh và bảng baseline thời gian/số file mở | Challenge target “giảm 50%” bằng baseline thật; kiểm tra pain có xảy ra đủ thường xuyên để đáng giải quyết không | Metric có hiện trạng, target và cách đo; quyết định không dựa trên con số ước đoán |
-| Trần Đoàn Hưng | Audit 30–50 văn bản về metadata, OCR, trạng thái hiệu lực và quan hệ sửa đổi/thay thế | Data-audit sheet, danh sách lỗi dữ liệu và đề xuất process fix | Kiểm tra AI có thể tìm đúng khi dữ liệu nguồn chưa sạch không; xác định tài liệu nào phải loại khỏi pilot | Làm rõ data readiness, giới hạn pilot và điều kiện chuyển từ Not Yet sang Go |
-| Lê Tuấn Hiệp | Research ít nhất 3 giải pháp/pattern tương tự và kiểm tra nguồn chính thức | Research notes có hyperlink, bảng so sánh điểm mạnh, khoảng trống và bài học | Challenge giả định phải tự xây Agent; kiểm tra tool/process hiện có đã giải được bao nhiêu phần trăm workflow | So sánh No AI/Rule/Workflow/Agent có cơ sở và tránh solution-first |
-| Ngô Khánh Trượng | Vẽ Current Workflow chi tiết, bổ sung actor, input/output, handoff và thời gian thật sau validation | Sơ đồ current workflow và bảng thời gian từng bước | Kiểm tra bottleneck có thật nằm ở search/kiểm tra hiệu lực hay ở quy trình quản trị tài liệu | Workflow hiện trạng và bottleneck nhất quán với evidence, metric và Problem Statement |
-| Phùng Văn Linh | Điều phối tiến độ, tổ chức buổi đồng thuận, xử lý disagreement và làm decision owner | Biên bản quyết định, danh sách việc còn thiếu, xác nhận cuối của nhóm | Buộc nhóm trả lời các gate Go/Not Yet/No-Go; không cho chuyển sang Go khi thiếu baseline, owner hoặc ACL test | Quyết định cuối rõ trách nhiệm, có lý do và được cả nhóm xác nhận |
-| Cao Hữu Phúc | Thiết kế Future Workflow, prototype plan, human review, fallback và rollback | Sơ đồ future workflow, pilot plan và bảng kiểm thử permission/fallback | Challenge nhu cầu dùng Agent; xác định AI sai thì ai phát hiện, hệ thống dừng ở đâu và quay về phương án nào | Giải pháp được giới hạn ở Workflow an toàn, có điểm kiểm soát và phương án quay về |
-| Đinh Lê Quỳnh Phương | Hoàn thiện Problem Statement v0/v1, chuẩn hóa baseline, target, công thức metric và ground truth | PS v0/v1, metric sheet và bộ câu hỏi/citation chuẩn được chuyên viên duyệt | Kiểm tra các metric 85%, 95%, 100% và giảm 50% có đo được, có owner và có mẫu số rõ hay chưa | Problem Statement đủ actor, workflow, bottleneck, impact, metric và boundary |
-| Nguyễn Ngọc Sơn | Rà soát risk, boundary, citation, ACL, audit log và toàn bộ report theo rubric | Risk register, permission-test result, QA checklist và danh sách lỗi cần sửa | Challenge các trường hợp citation đúng nhưng văn bản hết hiệu lực, retrieval vượt quyền hoặc AI trả lời khi thiếu nguồn | Report thể hiện rõ giới hạn AI, fail-closed, human accountability và điều kiện dừng pilot |
-
-## 7.9. Evidence manifest
-
-| Evidence ID | File đề xuất | Nội dung | Owner | Trạng thái |
-|---|---|---|---|---|
-| E01 | `02-group-problem-statement-interview-notes.md` | Notes 3–5 phỏng vấn đã ẩn danh | Đoàn Minh Hiếu | Chưa có |
-| E02 | `02-group-problem-statement-survey.png` | Ảnh kết quả survey | Kim Mạnh Hưng | Chưa có |
-| E03 | `02-group-problem-statement-baseline.csv` | Log 5–10 tác vụ hiện trạng | Kim Mạnh Hưng | Chưa có |
-| E04 | `02-group-problem-statement-data-audit.csv` | Audit 30–50 văn bản | Trần Đoàn Hưng | Chưa có |
-| E05 | `02-group-problem-statement-ground-truth.md` | Đáp án/citation do chuyên viên duyệt | Đinh Lê Quỳnh Phương | Chưa có |
-| E06 | `02-group-problem-statement-permission-test.md` | Kết quả kiểm thử ACL | Nguyễn Ngọc Sơn | Chưa có |
-| E07 | `02-group-problem-statement-contribution-log.md` | Đóng góp thật của thành viên | Nguyễn Thị Xuân Mai | Chưa có |
-
-## 7.10. Gate ra quyết định cuối
-
-| Gate | Điều kiện Go | Kết quả thật | Pass/Fail |
-|---|---|---|---|
-| Pain validation | ≥60% người được hỏi xác nhận pain đáng giải quyết | | |
-| Baseline | Có ít nhất 5 tác vụ đo được theo cùng quy tắc | | |
-| Data readiness | Hiệu lực và ACL đạt 100% trên tập pilot | | |
-| Answer correctness | ≥85% | | |
-| Citation accuracy | ≥95% | | |
-| Version accuracy | 100% trên pilot | | |
-| Time reduction | ≥50% median time | | |
-| Access safety | 0 kết quả vượt quyền | | |
-| Human owner | Có owner nghiệp vụ và owner dữ liệu | | |
